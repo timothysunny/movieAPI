@@ -9,7 +9,7 @@ async function fetchMovies() {
         return alert("Please enter a movie name");
     }
 
-    const url = `http://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=3a8e257b`;
+    const url = `https://www.omdbapi.com/?s=${encodeURIComponent(query)}&apikey=3a8e257b`;
 
     try {
         searchBtn.disabled = true;
