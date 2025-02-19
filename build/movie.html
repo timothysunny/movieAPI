@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Movie Details</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-[#141414] text-white">
+    <section class="flex flex-col">
+        <nav class="flex px-6 justify-between sm:justify-around ">
+            <div class="mt-4">
+                <img src="./img/navbar/Logo.png" alt="" class="max-h-[45px] sm:max-h-[50px]">
+            </div>
+            <div class="sm:hidden mt-4">
+                <img src="./img/hamburger.png" alt="">
+            </div>
+            <div class="hidden sm:block bg-[#0F0F0F] text-white py-3 px-5 border-[#1F1F1F] border-[4px] rounded-[12px] mt-2">
+                <div>
+                    <ul class="flex gap-6">
+                        <li class="px-4 py-2"><a href="./index.html">Home</a> </li>
+                        <li class="bg-[#1A1A1A] px-4 py-2 rounded-md flex items-center">Movies & Shows</li>
+                        <li class="px-4 py-2">Support</li>
+                        <li class="px-4 py-2">Subscriptions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="hidden sm:flex justify-between gap-6 mt-8">
+                <div>
+                    <img src="./img/navbar/Icon.png" alt="">
+                </div>
+                <div>
+                    <img src="./img/navbar/Icon(1).png" alt="">
+                </div>
+            </div>
+        </nav>
+    </section>
+    <div class="container mx-auto py-8">
+        <button onclick="goBack()" class="mb-4 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md transition">
+            ← Back
+         </button>   
+        <div id="movieDetails" class="text-center"></div>
+    </div>
+    <div class="max-w-[90%] px-5 lg:px-[7%] mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-3.5">
+            <div class="grid grid-cols-1 gap-3.5">
+                <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
+                    <p class="text-gray-400">Description</p>
+                    <p id="movieDescription"></p>
+                </div>
+                <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
+                    <p class="text-gray-400">Cast</p>
+                    <p id="movieDescription" class="mt-3"></p>
+                </div>
+                <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
+                    <p class="text-gray-400">Reviews</p>
+                    <p id="movieDescription" class="mt-3"></p>
+                </div>
+            </div>
+
+            <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
+                <div>
+                    <p class="text-gray-400 mt-5">Released Year</p>
+                    <p id="movieYear" class="mt-3"></p>  
+                </div>
+                <div>
+                    <p class="text-gray-400 mt-5">Available Language</p>
+                    <p id="movieLang" class="mt-3"></p>  
+                </div>
+                <div>
+                    <p class="text-gray-400 mt-5">Rating</p>
+                    <p id="movieRating" class="mt-3"></p>  
+                </div>
+                <div>
+                    <p class="text-gray-400 mt-5">Genres</p>
+                    <p id="movieGenres" class="mt-3"></p>  
+                </div>
+                <div>
+                    <p class="text-gray-400 mt-5">Director</p>
+                    <p id="movieDirector" class="mt-3"></p>  
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/movieDetails.js"></script>
+</body>
+</html>
