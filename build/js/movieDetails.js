@@ -10,7 +10,7 @@ async function fetchMovieDetails() {
         return;
     }
 
-    const url = `http://www.omdbapi.com/?i=${movieID}&apikey=3a8e257b`;
+    const url = `https://www.omdbapi.com/?i=${movieID}&apikey=3a8e257b`;
 
     try {
         const response = await fetch(url);
