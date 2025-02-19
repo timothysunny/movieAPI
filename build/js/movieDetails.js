@@ -44,6 +44,7 @@ function displayMovieDetails(movie) {
     document.getElementById("movieLang").innerHTML = movie.Language;
     document.getElementById("movieRating").innerHTML = movie.imdbRating;
     document.getElementById("movieGenres").innerHTML = movie.Genre;
+    document.getElementById("movieCast").innerHTML = movie.Actors;
 
 }
 

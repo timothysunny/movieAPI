@@ -13,7 +13,9 @@
                 <img src="./img/navbar/Logo.png" alt="" class="max-h-[45px] sm:max-h-[50px]">
             </div>
             <div class="sm:hidden mt-4">
-                <img src="./img/hamburger.png" alt="">
+                <button id="hamburgerBtn" class="cursor-pointer" onclick="toggleMobileMenu()">
+                    <img src="./img/hamburger.png" alt="">
+                </button>
             </div>
             <div class="hidden sm:block bg-[#0F0F0F] text-white py-3 px-5 border-[#1F1F1F] border-[4px] rounded-[12px] mt-2">
                 <div>
@@ -35,11 +37,48 @@
             </div>
         </nav>
     </section>
+    <nav id="mobileMenu"  class="text-white bg-black absolute top-[10%] left-0 right-0 py-10 z-50 hidden md:hidden">
+        <ul class="flex flex-col items-center gap-8">
+            <li><a href="#" class="hover:text-red-800">Home</a></li>
+            <li><a href="#" class="hover:text-red-800">Movies & Shows</a></li>
+            <li><a href="#" class="hover:text-red-800">Support</a></li>
+            <li><a href="#" class="hover:text-red-800">Subscriptions</a></li>
+        </ul>
+        <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-[90%] mx-auto mt-8">
+            <input type="text" id='searchInput' class="px-4 py-2 outline-none w-full text-white" placeholder="Search...">
+            <button id="searchBtn" class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+              Search
+            </button>
+          </div>
+    </nav>
     <div class="container mx-auto py-8">
         <button onclick="goBack()" class="mb-4 px-4 py-2 bg-gray-700 hover:bg-gray-600 text-white rounded-lg shadow-md transition">
             ← Back
          </button>   
         <div id="movieDetails" class="text-center"></div>
+        <div class="mx-auto grid grid-cols-1 md:flex md:items-center md:content-center md:justify-center gap-x-5">
+            <button class="bg-[#E50000] max-w-[80%] mx-auto md:mx-0 py-4 px-24 md:px-6 rounded-[8px] mt-6">
+                &#9654; Watch Later
+            </button>
+            <div class="flex items-center justify-center mt-7 gap-x-2">
+                <div class="bg-[#0F0F0F] px-4 py-4 border-[#262626] border-[1px] rounded-[8px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 6V18M18 12L6 12" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="bg-[#0F0F0F] px-4 py-4 border-[#262626] border-[1px] rounded-[8px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.63257 10.25C7.43892 10.25 8.16648 9.80416 8.6641 9.16967C9.43726 8.18384 10.4117 7.3634 11.5255 6.77021C12.2477 6.38563 12.8743 5.81428 13.1781 5.05464C13.3908 4.5231 13.5 3.95587 13.5 3.38338V2.75C13.5 2.33579 13.8358 2 14.25 2C15.4926 2 16.5 3.00736 16.5 4.25C16.5 5.40163 16.2404 6.49263 15.7766 7.46771C15.511 8.02604 15.8836 8.75 16.5019 8.75M16.5019 8.75H19.6277C20.6544 8.75 21.5733 9.44399 21.682 10.4649C21.7269 10.8871 21.75 11.3158 21.75 11.75C21.75 14.5976 20.7581 17.2136 19.101 19.2712C18.7134 19.7525 18.1142 20 17.4962 20H13.4802C12.9966 20 12.5161 19.922 12.0572 19.7691L8.94278 18.7309C8.48393 18.578 8.00342 18.5 7.51975 18.5H5.90421M16.5019 8.75H14.25M5.90421 18.5C5.98702 18.7046 6.07713 18.9054 6.17423 19.1022C6.37137 19.5017 6.0962 20 5.65067 20H4.74289C3.85418 20 3.02991 19.482 2.77056 18.632C2.43208 17.5226 2.25 16.3451 2.25 15.125C2.25 13.5725 2.54481 12.0889 3.08149 10.7271C3.38655 9.95303 4.16733 9.5 4.99936 9.5H6.05212C6.52404 9.5 6.7973 10.0559 6.5523 10.4593C5.72588 11.8198 5.25 13.4168 5.25 15.125C5.25 16.3185 5.48232 17.4578 5.90421 18.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </div>
+                <div class="bg-[#0F0F0F] px-4 py-4 border-[#262626] border-[1px] rounded-[8px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.114 5.63603C22.6287 9.15075 22.6287 14.8492 19.114 18.364M16.4626 8.28777C18.5129 10.338 18.5129 13.6621 16.4626 15.7124M6.75 8.25005L11.4697 3.53038C11.9421 3.0579 12.75 3.39253 12.75 4.06071V19.9394C12.75 20.6076 11.9421 20.9422 11.4697 20.4697L6.75 15.75H4.50905C3.62971 15.75 2.8059 15.2436 2.57237 14.3958C2.36224 13.633 2.25 12.8296 2.25 12C2.25 11.1705 2.36224 10.3671 2.57237 9.60429C2.8059 8.75652 3.62971 8.25005 4.50905 8.25005H6.75Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                </div>
+            </div>
+           
+        </div>
     </div>
     <div class="max-w-[90%] px-5 lg:px-[7%] mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-[70%_30%] gap-3.5">
@@ -50,11 +89,7 @@
                 </div>
                 <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
                     <p class="text-gray-400">Cast</p>
-                    <p id="movieDescription" class="mt-3"></p>
-                </div>
-                <div class="bg-[#1A1A1A] px-7 py-7 rounded-xl">
-                    <p class="text-gray-400">Reviews</p>
-                    <p id="movieDescription" class="mt-3"></p>
+                    <p id="movieCast" class="mt-3"></p>
                 </div>
             </div>
 
@@ -84,5 +119,6 @@
     </div>
     
     <script src="./js/movieDetails.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
