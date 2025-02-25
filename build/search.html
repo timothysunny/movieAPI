@@ -4,10 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Document</title>
+    <title>Search - StreamVibe</title>
 </head>
 <body class="bg-[#141414]">
-
+  <section>
+    <nav class="flex px-6 justify-between sm:justify-around ">
+        <div class="mt-4">
+            <img src="./img/navbar/Logo.png" alt="" class="max-h-[45px] sm:max-h-[50px]">
+        </div>
+        <div class="sm:hidden mt-4">
+            <button id="hamburgerBtn" class="cursor-pointer" onclick="toggleMobileMenu()">
+                <img src="./img/hamburger.png" alt="">
+            </button>
+        </div>
+        <div class="hidden sm:block bg-[#0F0F0F] text-white py-3 px-5 border-[#1F1F1F] border-[4px] rounded-[12px] mt-2">
+            <div>
+                <ul class="flex gap-6">
+                    <li class="px-4 py-2"><a href="./index.html">Home</a> </li>
+                    <li class="bg-[#1A1A1A] px-4 py-2 rounded-md flex items-center""><a href="./search.html">Movies & Shows </a> </li>
+                    <li class="px-4 py-2"><a href="./support.html"> Support </a> </li>
+                    <li class="px-4 py-2">Subscriptions</li>
+                </ul>
+            </div>
+        </div>
+        <div class="hidden sm:flex justify-between gap-6 mt-8">
+            <div>
+                <a href="./search.html">
+                    <img src="./img/navbar/Icon.png" alt="">
+                </a>
+            </div>
+            <div>
+                <img src="./img/navbar/Icon(1).png" alt="">
+            </div>
+        </div>
+    </nav>
+</section>
+<nav id="mobileMenu"  class="text-white bg-black absolute top-[10%] left-0 right-0 py-10 z-50 hidden md:hidden">
+    <ul class="flex flex-col items-center gap-8">
+        <li><a href="#" class="hover:text-red-800">Home</a></li>
+        <li><a href="#" class="hover:text-red-800">Movies & Shows</a></li>
+        <li><a href="#" class="hover:text-red-800">Support</a></li>
+        <li><a href="#" class="hover:text-red-800">Subscriptions</a></li>
+    </ul>
+    <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-[90%] mx-auto mt-8">
+        <input type="text" id='searchInput' class="px-4 py-2 outline-none w-full text-white" placeholder="Search...">
+        <button id="searchBtn" class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+          Search
+        </button>
+      </div>
+</nav>
     <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-[50%] mx-auto mt-8">
         <input type="text" id='searchInput' class="px-4 py-2 outline-none w-full text-white" placeholder="Search...">
         <button id="searchBtn" class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
