@@ -49,8 +49,7 @@ function displayMovies(movies) {
             <h3 class="text-lg font-semibold mt-2">${movie.Title}</h3>
             <p class="text-gray-400">${movie.Year}</p>
         `;
-
-        // Redirect to movie.html with movie ID as a query parameter
+        
         movieElement.addEventListener("click", () => {
             window.location.href = `movie.html?id=${movie.imdbID}`;
         });
