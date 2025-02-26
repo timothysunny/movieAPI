@@ -1,10 +1,16 @@
+document.getElementById("searchInput").addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById("searchBtn").click();
+    }
+});
+
 document.getElementById("searchBtn").addEventListener("click", fetchMovies);
 
 async function fetchMovies() {
     const searchBtn = document.getElementById("searchBtn");
     const query = document.getElementById("searchInput").value.trim();
     const container = document.getElementById("movieContainer");
-
+    
     if (!query) {
         return alert("Please enter a movie name");
     }
