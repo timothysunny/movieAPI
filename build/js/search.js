@@ -48,7 +48,7 @@ function displayMovies(movies) {
 
     movies.forEach(movie => {
         const movieElement = document.createElement("div");
-        movieElement.classList.add("movie", "cursor-pointer", "rounded-lg", "overflow-hidden", "bg-gray-900", "shadow-lg", "p-4", "hover:shadow-xl", "transition");
+        movieElement.classList.add("movie", "cursor-pointer", "rounded-lg", "overflow-hidden", "shadow-lg", "p-4", "hover:shadow-xl", "transition");
 
         movieElement.innerHTML = `
             <img class="w-full h-[300px] object-cover rounded-lg" src="${movie.Poster !== "N/A" ? movie.Poster : "placeholder.jpg"}" alt="${movie.Title}">
