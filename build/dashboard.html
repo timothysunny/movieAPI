@@ -474,15 +474,11 @@
     </footer>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
-            // Simulated watchlist data (Replace this with actual data fetched from an API)
-            const watchlist = [
-                { title: "Inception", year: "2010", poster: "https://via.placeholder.com/150" },
-                { title: "Interstellar", year: "2014", poster: "https://via.placeholder.com/150" },
-                { title: "The Dark Knight", year: "2008", poster: "https://via.placeholder.com/150" }
-            ];
-
             const watchlistContainer = document.getElementById("watchlist-container");
             const emptyMessage = document.getElementById("empty-watchlist-message");
+
+            // Get watchlist from localStorage
+            let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
 
             if (watchlist.length === 0) {
                 emptyMessage.classList.remove("hidden");
@@ -498,6 +494,7 @@
                 });
             }
         });
+
     </script>
 </body>
 <script src="./js/index.js"></script>
