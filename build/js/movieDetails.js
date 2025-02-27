@@ -52,3 +52,4 @@ function displayMovieDetails(movie) {
 function goBack() {
     window.history.back();
 }
+

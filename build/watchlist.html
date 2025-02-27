@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="bg-[#141414] text-white">
+    <h1 class="text-center text-3xl mt-8">Your Watchlist</h1>
+    <div id="watchlistContainer" class="grid grid-cols-1 md:grid-cols-3 gap-4 px-6 mt-6"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const watchlistContainer = document.getElementById("watchlistContainer");
+            let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+            if (watchlist.length === 0) {
+                watchlistContainer.innerHTML = "<p class='text-center'>Your watchlist is empty.</p>";
+                return;
+            }
+
+            watchlist.forEach(movie => {
+                let movieElement = document.createElement("div");
+                movieElement.classList.add("border", "p-4", "rounded-lg", "bg-gray-800", "text-center");
+
+                movieElement.innerHTML = `
+                    <img src="${movie.poster}" alt="${movie.title}" class="w-full h-64 object-cover rounded-lg">
+                    <h2 class="text-lg font-semibold mt-2">${movie.title} (${movie.year})</h2>
+                    <a href="movie.html?id=${movie.imdbID}" class="text-blue-400 underline">View Movie</a>
+                    <button class="mt-2 bg-red-600 px-4 py-2 rounded remove-btn" data-id="${movie.imdbID}">Remove</button>
+                `;
+
+                watchlistContainer.appendChild(movieElement);
+            });
+
+            // Remove from Watchlist
+            document.querySelectorAll(".remove-btn").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    let id = this.getAttribute("data-id");
+                    let updatedWatchlist = watchlist.filter(movie => movie.imdbID !== id);
+                    localStorage.setItem("watchlist", JSON.stringify(updatedWatchlist));
+                    location.reload(); // Refresh the page
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:8000/api";
+const BASE_URL = "https://moviebackend-production-2d2a.up.railway.app/api";
 
 // 🔹 REGISTER FUNCTION
 async function register() {
