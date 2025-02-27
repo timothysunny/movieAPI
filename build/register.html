@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100" style="background-image: url('./img/head.png')">
+    <div class="bg-black opacity-75 text-white px-11 py-11">
+        <h1 class="text-3xl font-bold">Sign Up</h1>
+        <div class="mt-4 flex flex-col gap-y-6">
+            <input type="text" id="register-username" placeholder="Username" class="bg-[#333333] p-2 border rounded">
+            <input type="password" id="register-password" placeholder="Password" class="bg-[#333333] p-2 border rounded">
+            <div class="mt-10">
+                <button onclick="register()" class="px-4 py-2 bg-[#E50914] text-white rounded w-full">
+                    Sign Up
+                </button>
+                <p class="text-[#737373] text-[14px] mt-11">
+                    Don't have an account?<span class="text-white"> <a href="./login.html"> Sign Up Now </a> </span>
+                </p>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>

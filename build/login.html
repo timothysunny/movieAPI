@@ -1,0 +1,31 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-100" style="background-image: url('./img/head.png')">
+    <div class="bg-black opacity-75 text-white px-11 py-11">
+        <h1 class="text-3xl font-bold">Sign In</h1>
+        <div class="mt-4 flex flex-col gap-y-6">
+            <input type="text" id="login-username" placeholder="Username" class="bg-[#333333] p-2 border rounded">
+            <input type="password" id="login-password" placeholder="Password" class="bg-[#333333] p-2 border rounded">
+            <button onclick="login()" class="mt-10 px-4 py-2 bg-[#E50914] text-white rounded w-full">
+                Login
+            </button>
+            <div>
+                
+                <p class="text-[#737373] text-[14px] mt-11">
+                    Don't have an account?<span class="text-white"> <a href="./register.html"> Sign Up Now </a> </span>
+                </p>
+                
+            </div>
+            
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
