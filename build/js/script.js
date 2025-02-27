@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         if (!response.ok) throw new Error("Failed to fetch user info");
 
         const data = await response.json();
-        userInfo.innerText = `Hello, ${data.username}! 👋`;
+        userInfo.innerText = `Welcome ${data.username} to Your Movie Dashboard`;
 
     } catch (error) {
         console.error(error);
