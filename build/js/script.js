@@ -122,7 +122,7 @@ async function getUserInfo() {
 
     if (response.ok) {
         const data = await response.json();
-        document.getElementById("user-info").innerText = `Hello, ${data.username}! 👋`;
+        document.getElementById("user-info").innerText = `Welcome ${data.username} to Your Movie Dashboard`;
     } else {
         console.error("Failed to fetch user info.");
         logout();
