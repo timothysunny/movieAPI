@@ -55,6 +55,16 @@
             </button>
           </div>
     </nav>
+    <h1 class="text-3xl font-bold mb-4">Welcome to Your Movie Dashboard</h1>
+        
+        <!-- Watchlist Section -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-3">Your Watchlist</h2>
+            <div id="watchlist-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-white">
+                <!-- Watchlist movies will be injected here -->
+            </div>
+            <p id="empty-watchlist-message" class="hidden text-white">Your watchlist is empty.</p>
+        </div>
         <div class="flex justify-center mt-5">  
             <p id="user-info" class="mt-4 text-white text-4xl text-center"></p>
         </div>
@@ -460,6 +470,33 @@
         </div>
         
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Simulated watchlist data (Replace this with actual data fetched from an API)
+            const watchlist = [
+                { title: "Inception", year: "2010", poster: "https://via.placeholder.com/150" },
+                { title: "Interstellar", year: "2014", poster: "https://via.placeholder.com/150" },
+                { title: "The Dark Knight", year: "2008", poster: "https://via.placeholder.com/150" }
+            ];
+
+            const watchlistContainer = document.getElementById("watchlist-container");
+            const emptyMessage = document.getElementById("empty-watchlist-message");
+
+            if (watchlist.length === 0) {
+                emptyMessage.classList.remove("hidden");
+            } else {
+                watchlist.forEach(movie => {
+                    const movieCard = document.createElement("div");
+                    movieCard.className = "bg-gray-800 p-4 rounded-lg shadow-lg";
+                    movieCard.innerHTML = `
+                        <img src="${movie.poster}" alt="${movie.title}" class="w-full h-48 object-cover rounded-md mb-2">
+                        <h3 class="text-lg font-semibold">${movie.title} (${movie.year})</h3>
+                    `;
+                    watchlistContainer.appendChild(movieCard);
+                });
+            }
+        });
+    </script>
 </body>
 <script src="./js/index.js"></script>
 <script src="./js/script.js"></script>
