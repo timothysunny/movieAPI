@@ -454,8 +454,14 @@
   .mt-20 {
     margin-top: calc(var(--spacing) * 20);
   }
+  .mt-\[20px\] {
+    margin-top: 20px;
+  }
   .mt-\[40px\] {
     margin-top: 40px;
+  }
+  .mt-\[60px\] {
+    margin-top: 60px;
   }
   .mt-\[180px\] {
     margin-top: 180px;

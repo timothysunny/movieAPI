@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="bg-[#141414]">
-    <section class="flex flex-col h-[68vh] bg-cover bg-center bg-no-repeat relative" style="background-image: url('./img/head.png')">
+    <section>
         <nav class="flex px-6 justify-between sm:justify-around ">
             <div class="mt-4">
                 <a href="./index.html">
@@ -22,10 +22,10 @@
             <div class="hidden sm:block bg-[#0F0F0F] text-white py-3 px-5 border-[#1F1F1F] border-[4px] rounded-[12px] mt-2">
                 <div>
                     <ul class="flex gap-6">
-                        <li class="bg-[#1A1A1A] px-4 py-2 rounded-md flex items-center"><a href="./index.html">Home</a> </li>
-                        <li class="px-4 py-2"><a href="./search.html">Movies & Shows </a> </li>
+                        <li class="px-4 py-2"><a href="./index.html">Home</a> </li>
+                        <li class="bg-[#1A1A1A] px-4 py-2 rounded-md flex items-center""><a href="./search.html">Movies & Shows </a> </li>
                         <li class="px-4 py-2"><a href="./support.html"> Support </a> </li>
-                        <li class="px-4 py-2"><a href="./subscription.html">Subscriptions</a></li>
+                        <li class="px-4 py-2">Subscriptions</li>
                     </ul>
                 </div>
             </div>
@@ -49,30 +49,15 @@
             <li><a href="./subscription.html" class="hover:text-red-800">Subscriptions</a></li>
         </ul>
         <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden w-[90%] mx-auto mt-8">
-            <input type="text" id='searchInput' class="px-4 py-2 outline-none w-full text-white" placeholder="Search...">
-            <button id="searchBtn" class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
-              Search
+            <input type="text" id='searchInput1' class="px-4 py-2 outline-none w-full text-white" placeholder="Search...">
+            <button id="searchBtn1" class="px-4 py-2 bg-gray-800 text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500">
+                Search
             </button>
           </div>
     </nav>
-    <div class="absolute top-[50%] md:top-[63%] px-[5%]">
-        <h1 class="text-center text-[28px] sm:text-4xl md:text-5xl text-white font-bold ">
-            The Best Streaming Experience
-        </h1>
-        <div class="hidden sm:block text-center text-[14px] sm:text-[14px] md:text-[18px] text-[#999999] mt-2.5 sm:max-w-[90%] md:max-w-[80%] mx-auto">
-            StreamVibe is the best streaming experience for watching your
-             favorite movies and shows on demand, anytime, anywhere. With StreamVibe, you can enjoy a wide
-              variety of content, including the latest blockbusters, classic movies, popular TV shows,
-             and more. You can also create your own watchlists, so you can easily find the content you want to watch.
-        </div>
-        <div class="sm:hidden text-center text-[14px] sm:text-[14px] md:text-[18px] text-[#999999] mt-2.5 sm:max-w-[50%] md:max-w-[70%] mx-auto">
-            StreamVibe is the best streaming experience for watching your
-             favorite movies and shows on demand, anytime, anywhere.
-        </div>
         <div class="flex justify-center mt-5">  
             <p id="user-info" class="mt-4 text-white text-4xl text-center"></p>
         </div>
-    </div>
     <section class="mt-[180px] sm:mt-[260px] md:mt-[340px] px-[5%] mb-20 sm:mb-32 md:mb-36">
         <h1 class="text-left text-2xl sm:text-3xl md:text-4xl text-white font-bold">
             Explore our wide variety of categories
