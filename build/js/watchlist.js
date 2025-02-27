@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     // Fetch movie details from OMDB API (or your backend)
     async function fetchMovieDetails(id) {
         try {
-            const response = await fetch(`https://www.omdbapi.com/?apikey=YOUR_API_KEY&i=${id}`);
+            const response = await fetch(`https://www.omdbapi.com/?apikey=3a8e257b&i=${id}`);
             const movie = await response.json();
             return movie;
         } catch (error) {
